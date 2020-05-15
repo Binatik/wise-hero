@@ -1,11 +1,13 @@
-//Global
+//Global 
+let score = localStorage.getItem("score");
+if (score === undefined || isNaN(score)) localStorage.setItem("score", 0);
 const lItem1 = document.getElementById('it1');
 const lItem2 = document.getElementById('it2');
 const formPanelTested = document.querySelector('.form__panel_tested');
 const mistake = document.querySelector('.mistake');
 const itemScore = document.querySelector('.score');
-const itemlvl = document.querySelector('.lvl');
-let score = 0;
+const itemlvl = document.querySelector('.lvl');  
+const textg = itemScore.innerHTML = `Ваш счет: ${score}`;
 let lvl = 1;
 
 function random(min, max) {
@@ -50,18 +52,19 @@ class Task {
         }
     }
 
-    checkAnswer() {
-        const text = itemScore.innerHTML = `Ваш счет:`;
+    checkAnswer() { 
         if (+formPanelTested.value === this.answer) {
             formPanelTested.value = '';
             mistake.innerHTML = 'Правильно, продолжай еще.';
-            score++
-            itemScore.innerHTML = `${text} ${score}`;
+            score = localStorage.getItem("score");
+            score++;
+            localStorage.setItem("score", score);
             this.getRandom();
         } else if (formPanelTested.value !== '') {
             mistake.innerHTML = 'Неправильно';
-            score--
-            itemScore.innerHTML = `${text} ${score}`;
+            score = localStorage.getItem("score");
+            score--;
+            localStorage.setItem("score", score);
         } else if (formPanelTested.value === '') {
             mistake.innerHTML = 'Вы не ввели число';
         }
