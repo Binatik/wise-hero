@@ -1,6 +1,6 @@
 //Global 
 let score = localStorage.getItem("score");
-if (score === undefined || isNaN(score)) localStorage.setItem("score", 0);
+if (score === undefined || score === null || isNaN(score)) localStorage.setItem("score", 0);
 const lItem1 = document.getElementById('it1');
 const lItem2 = document.getElementById('it2');
 const formPanelTested = document.querySelector('.form__panel_tested');
