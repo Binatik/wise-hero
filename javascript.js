@@ -37,7 +37,7 @@ class Task {
             itemlvl.style.fontSize = '10px';
         } else if (score >= 0 && score <= 4) {
             this.setRandomTask(2, 5);
-            itemlvl.innerHTML = `Уровень: 2 (Гость)`; 
+            itemlvl.innerHTML = `Уровень: 1 (Гость)`; 
             itemlvl.style.fontSize = '12px'; 
         } else if (score >= 5 && score <= 15) {
             this.setRandomTask(5, 10);
@@ -62,12 +62,12 @@ class Task {
         } 
         else if (score >= 100 && score <= 199) {
             this.setRandomTask(31, 34731);
-            itemlvl.innerHTML = `Уровень: 6 (Профессор)`; 
+            itemlvl.innerHTML = `Уровень: 7 (Профессор)`; 
             itemlvl.style.fontSize = '22px';
         } 
         else if (score >= 200) {
             this.setRandomTask(31, 34731);
-            itemlvl.innerHTML = `Уровень: 6 (Гений)`; 
+            itemlvl.innerHTML = `Уровень: 8 (Гений)`; 
             itemlvl.style.fontSize = '24px';
         }
     }
