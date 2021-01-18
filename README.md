@@ -1,2 +1,3 @@
-> To check immediately: 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://binatik.github.io/Game--solving-example)
+> Check on the server GitHub:
+
+> [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://binatik.github.io/Game--solving-example)
